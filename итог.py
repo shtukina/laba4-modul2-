@@ -22,10 +22,10 @@ class Vehicle:
         """ Возвращает общую информацию о транспортном средстве. """
         return f"{self.year} {self.brand} {self.model}"
 
-    def str(self):
+    def __str__(self):(self):
         return f"Транспортное средство: {self.vehicle_info()}"
 
-    def repr(self):
+    def __repr__(self):
         return f"{self.class.name}(brand={self.brand!r}, model={self.model!r}, year={self.year!r})"
 
 
@@ -52,10 +52,10 @@ class Car(Vehicle):
         """ Возвращает информацию о легковом автомобиле, включая количество дверей. """
         return f"{super().vehicle_info()} | Дверей: {self.doors}"
 
-    def str(self):
+    def __str__(self):
         return f"Легковой автомобиль: {self.vehicle_info()}"
 
-    def repr(self):
+    def __repr__(self):
         return f"{self.class.name}(brand={self.brand!r}, model={self.model!r}, year={self.year!r}, doors={self.doors!r})"
 
 
@@ -82,10 +82,10 @@ class Truck(Vehicle):
         """ Возвращает информацию о грузовом автомобиле, включая грузоподъемность. """
         return f"{super().vehicle_info()} | Грузоподъемность: {self.capacity} тонн"
 
-    def str(self):
+    def __str__(self):
         return f"Грузовой автомобиль: {self.vehicle_info()}"
 
-    def repr(self):
+    def __repr__(self):
         return f"{self.class.name}(brand={self.brand!r}, model={self.model!r}, year={self.year!r}, capacity={self.capacity!r})"
 
 
