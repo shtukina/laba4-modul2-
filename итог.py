@@ -90,7 +90,7 @@ class Truck(Vehicle):
 
 
 # Пример использования классов
-if name == "main":
+if __name__ == "__main__":
     car = Car("Toyota", "Camry", 2020, 4)
     truck = Truck("Volvo", "FH", 2019, 18.0)
 
